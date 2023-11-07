@@ -3,11 +3,6 @@ from src.models.dish import Dish
 from src.models.ingredient import Ingredient, Restriction
 
 
-# Req 2
-# def test_dish():
-
-
-# Test initialization
 def test_dish():
     dish = Dish("Pão de Queijo", 3.0)
     dish2 = Dish("Pão de Queijo", 3.0)
