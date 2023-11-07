@@ -3,6 +3,7 @@ from src.models.ingredient import Ingredient, Restriction
 
 # Req 1
 def test_ingredient():
+    # Test initialization
     ingredient = Ingredient("ovo")
     ingredient2 = Ingredient("ovo")
     ingredient3 = Ingredient("salmão")
@@ -10,6 +11,7 @@ def test_ingredient():
     assert ingredient.name == "ovo"
     assert ingredient.restrictions == {Restriction.ANIMAL_DERIVED}
 
+    # Test magic methods
     assert ingredient == ingredient2
     assert ingredient != ingredient3
 
