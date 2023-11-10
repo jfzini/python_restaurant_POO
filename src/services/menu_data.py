@@ -17,15 +17,12 @@ class MenuData:
                 price = float(row["price"])
                 dish = Dish(name, price)
                 ingredient = Ingredient(row["ingredient"])
+                amount = int(row["recipe_amount"])
 
                 if dish not in self.dishes:
-                    dish.add_ingredient_dependency(
-                        ingredient, int(row["recipe_amount"])
-                    )
+                    dish.add_ingredient_dependency(ingredient, amount)
                     self.dishes.add(dish)
                 else:
                     for dish in self.dishes:
                         if dish.name == name:
-                            dish.add_ingredient_dependency(
-                                ingredient, int(row["recipe_amount"])
-                            )
+                            dish.add_ingredient_dependency(ingredient, amount)
