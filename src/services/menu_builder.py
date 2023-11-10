@@ -25,7 +25,7 @@ class MenuBuilder:
         self.inventory.consume_recipe(curr_dish.recipe)
 
     # Req 4
-    def get_main_menu(self, restriction=None) -> List[Dict]:
+    def get_main_menu(self, restriction: str | None = None) -> List[Dict]:
         all_dishes = self.menu_data.dishes
         no_restriction_menu = list()
 
